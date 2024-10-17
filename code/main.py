@@ -84,7 +84,7 @@ class Meteor(pygame.sprite.Sprite):
 def Collissions():
 
     global running
-    collide_sprites = pygame.sprite.spritecollide(Ship, meteor_sprites, True)
+    collide_sprites = pygame.sprite.spritecollide(Ship, meteor_sprites, True, pygame.sprite.collide_mask)
     font = pygame.font.Font(join('images', 'Oxanium-Bold.ttf'), 40)
     font_text = font.render("YOU DIED", True, (255, 100, 100))
     font_text_rect = font_text.get_rect(midbottom=(Width / 2, Height / 2))
